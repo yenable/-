@@ -144,7 +144,9 @@ export function PurchaseScreen({
             onChange={(e) => setReview(e.target.value)}
             onBlur={() => setTouchedReview(true)}
             maxLength={REVIEW_MAX_CHARS + 20}
-            placeholder="예) 넓은 들판을 보고 싶어요!"
+            placeholder={`예) 발표가 재미있어서 꼭 가 보고 싶어요!
+예) 지형과 기후 설명이 이해하기 쉬웠어요!
+예) 여행 코스가 알차고 흥미로웠어요!`}
             aria-invalid={touchedReview && !reviewCheck.ok ? true : undefined}
             aria-describedby="review-help"
           />
