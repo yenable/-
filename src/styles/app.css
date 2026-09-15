@@ -511,7 +511,7 @@ textarea {
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 10px;
 }
 
 @media (min-width: 560px) {
@@ -554,37 +554,11 @@ textarea {
   width: 100%;
 }
 
-.product-media {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  max-width: 100%;
-  background: linear-gradient(180deg, #dcecfb 0%, #f3f8fd 100%);
-  display: grid;
-  place-items: center;
-  border-bottom: 1px solid var(--line);
-  overflow: hidden;
-}
-
-.product-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.media-fallback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  color: #6d8aa8;
-  font-size: 0.78rem;
-}
-
 .product-body {
-  padding: 12px 14px 14px;
+  padding: 10px 14px 11px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 9px;
   flex: 1;
 }
 
@@ -592,6 +566,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 8px;
+  row-gap: 5px;
   flex-wrap: wrap;
 }
 
@@ -621,26 +596,21 @@ textarea {
 
 .product-country {
   margin: 0;
-  font-size: 1.16rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.12rem;
   font-weight: 800;
   line-height: 1.25;
   word-break: keep-all;
 }
 
-.product-tagline {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-
-.product-tagline.is-placeholder {
-  border: 1px dashed #c6d2de;
-  border-radius: 9px;
-  padding: 7px 9px;
-  background: #f8fafc;
-  font-size: 0.82rem;
+/* 국가명 왼쪽 국기 이모지 */
+.country-flag {
+  font-size: 1.35rem;
+  line-height: 1;
+  flex: none;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .select-state {
@@ -650,7 +620,7 @@ textarea {
   justify-content: space-between;
   gap: 8px;
   border-top: 1px dashed var(--line);
-  padding-top: 10px;
+  padding-top: 9px;
 }
 
 .select-label {
@@ -702,24 +672,6 @@ textarea {
   color: #0a5c50;
 }
 
-/* 선택 상태 리본 (색 외 형태로도 구분) */
-.selected-ribbon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--teal);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 4px 9px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  box-shadow: var(--shadow-sm);
-}
-
-/* ---------- 하단 sticky 제출 영역 ---------- */
 .sticky-bar {
   position: sticky;
   bottom: 0;
