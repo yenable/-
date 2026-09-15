@@ -52,7 +52,7 @@ export function ResultsView({
           </p>
         </div>
         <p className="closing-line">
-          모든 모둠이 지형과 기후를 담은 멋진 여행 상품을 완성했습니다!
+          멋진 여행 상품을 준비한 다섯 여행사 모두에게 큰 박수를 보냅니다!
         </p>
       </div>
     );
@@ -193,7 +193,7 @@ export function ResultsView({
       </div>
 
       <p className="closing-line">
-        모든 모둠이 지형과 기후를 담은 멋진 여행 상품을 완성했습니다!
+        멋진 여행 상품을 준비한 다섯 여행사 모두에게 큰 박수를 보냅니다!
       </p>
     </div>
   );
