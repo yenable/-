@@ -309,11 +309,9 @@ function ResultsScreen({
       }
     };
     void load();
-    // 공개 범위를 넓히면 자동으로 반영되도록 함께 구독한다
-    const stop = backend().subscribeSession(() => void load());
+
     return () => {
       alive = false;
-      stop();
     };
   }, [session.revealScope, session.phase]);
 
