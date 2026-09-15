@@ -8,6 +8,19 @@ import type { Product } from './types';
  */
 export const PLACEHOLDER_TAGLINE = '(자리표시자) 모둠 소개 문구를 넣어 주세요';
 
+/**
+ * ISO 3166-1 alpha-2 코드를 국기 이모지로 바꾼다.
+ * 덴마크 DK 🇩🇰 / 일본 JP 🇯🇵 / 필리핀 PH 🇵🇭 / 캐나다 CA 🇨🇦 / 사우디아라비아 SA 🇸🇦
+ * (코드가 비어 있거나 두 글자가 아니면 빈 문자열 — 카드에는 국가명만 보인다)
+ */
+export function countryFlag(code: string): string {
+  const c = (code ?? '').trim().toUpperCase();
+  if (!/^[A-Z]{2}$/.test(c)) return '';
+  return String.fromCodePoint(
+    ...[...c].map((ch) => 0x1f1e6 + ch.charCodeAt(0) - 65),
+  );
+}
+
 export interface ProductSeed {
   groupNo: number;
   countryName: string;
